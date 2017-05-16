@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/bash -x
 
 repository_url=`echo $1 | sed 's~http[s]*://~~g'`
 image_name=$2
 
-eval $(aws ecr get-login --region us-east-1)
+eval $(aws ecr get-login --region eu-west-2)
 
 # If the image doesn't exists, we build it and push it to the repository.
 if [[ "$(docker images -q ${repository_url} 2> /dev/null)" == "" ]]; then

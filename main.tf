@@ -4,7 +4,7 @@ provider "aws" {
   region = "${var.region}"
 }
 
-resource "terraform_remote_state" "tfstate" {
+data "terraform_remote_state" "tfstate" {
   backend = "s3"
   config {
     bucket = "${var.s3_bucket}"
@@ -174,5 +174,5 @@ resource "aws_iam_role_policy" "instance_role_policy_jenkins" {
 resource "aws_iam_instance_profile" "iam_instance_profile" {
   name = "iam_instance_profile_${var.ecs_cluster_name}"
   path = "/"
-  roles = ["${aws_iam_role.host_role_jenkins.name}"]
+  role = "${aws_iam_role.host_role_jenkins.name}"
 }

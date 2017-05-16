@@ -68,7 +68,7 @@ variable "desired_service_count" {
 }
 
 variable "s3_bucket" {
-  default = "mycompany-jenkins"
+  default = "cakesolutions-jenkins"
   description = "S3 bucket where remote state and Jenkins data will be stored."
 }
 

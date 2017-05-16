@@ -7,9 +7,9 @@ provider "aws" {
 resource "terraform_remote_state" "tfstate" {
   backend = "s3"
   config {
-    bucket = "mycompany-terraform"
+    bucket = "${var.s3_bucket}"
     key = "jenkins/terraform.tfstate"
-    region = "us-east-1"
+    region = "${var.region}"
   }
 }
 

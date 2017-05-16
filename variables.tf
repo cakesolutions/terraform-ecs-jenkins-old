@@ -8,12 +8,12 @@ variable "secret_key" {
 
 variable "region" {
   description = "The AWS region to create resources in."
-  default = "us-east-1"
+  default = "eu-west-2"
 }
 
 variable "availability_zone" {
   description = "The availability zone"
-  default = "us-east-1b"
+  default = "eu-west-2b"
 }
 
 variable "ecs_cluster_name" {
@@ -24,14 +24,17 @@ variable "ecs_cluster_name" {
 variable "amis" {
   description = "Which AMI to spawn. Defaults to the AWS ECS optimized images."
   default = {
-    us-east-1 = "ami-8f7687e2"
-    us-west-1 = "ami-bb473cdb"
-    us-west-2 = "ami-84b44de4"
-    eu-west-1 = "ami-4e6ffe3d"
-    eu-central-1 = "ami-b0cc23df"
-    ap-northeast-1 = "ami-095dbf68"
-    ap-southeast-1 = "ami-cf03d2ac"
-    ap-southeast-2 = "ami-697a540a"
+    us-east-1	      =	"ami-275ffe31"
+    us-east-2	      =	"ami-62745007"
+    us-west-1	      =	"ami-689bc208"
+    us-west-2	      =	"ami-62d35c02"
+    eu-west-1	      =	"ami-95f8d2f3"
+    eu-west-2	      =	"ami-bf9481db"
+    eu-central-1    = "ami-085e8a67"
+    ap-northeast-1  = "ami-f63f6f91"
+    ap-southeast-1	= "ami-b4ae1dd7"
+    ap-southeast-2  = "ami-fbe9eb98"
+    ca-central-1    =	"ami-ee58e58a"
   }
 }
 
@@ -40,7 +43,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  default = "devops-tf"
+  default = "jenkins"
   description = "SSH key name in your AWS account for AWS instances."
 }
 

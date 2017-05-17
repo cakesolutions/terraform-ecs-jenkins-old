@@ -1,7 +1,7 @@
 [
   {
     "name": "jenkins",
-    "image": "jenkins:2.3",
+    "image": "675228244484.dkr.ecr.eu-west-2.amazonaws.com/cakesolutions/jenkins:latest",
     "cpu": 128,
     "memory": 1024,
     "essential": true,
